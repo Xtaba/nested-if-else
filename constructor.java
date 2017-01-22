@@ -1,12 +1,17 @@
 //two string method
+import java.util.EnumSet; //has a range method in defined in it
+
 
 public class constructor {
 	public static void main(String[] args){
-		potpie potObject = new potpie(4,5,6); //creat an object using para meters 4,5,6
-		tuna tunaObject = new tuna("Ehsun", potObject);
+		for(tuna people: tuna.values() ) //enhanced for loop, array that we need to loop through
+			System.out.printf("%s\t%s\t%s\n", people, people.getDesc(), people.getYear());
 		
-		System.out.println(tunaObject);
-}
+		System.out.println("\nNow for the range of constants!!!\n");
+		
+		for(tuna people: EnumSet.range(tuna.Ehsun,tuna.erin))//enhanced for loop to go to the range of an array
+			System.out.printf("%s\t%s\t%s\n", people,people.getDesc(),people.getYear());
+	}
 }
 
-//first line we bulid constructor next line object
+//Object, description, year
