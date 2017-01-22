@@ -1,17 +1,12 @@
-//overloaded constructor, making multiple constructors
+//two string method
 
 public class constructor {
 	public static void main(String[] args){
+		potpie potObject = new potpie(4,5,6); //creat an object using para meters 4,5,6
+		tuna tunaObject = new tuna("Ehsun", potObject);
 		
-		time timeObject = new time();
-		time timeObject1 = new time(3);
-		time timeObject2 = new time(3,12); //the object has two parameters goes to time.java finds the one with two constructor
-		time timeObject3 = new time(1,22,40);
-		
-		System.out.printf("%s\n",timeObject.toMilitary());
-		System.out.printf("%s\n",timeObject1.toMilitary());
-		System.out.printf("%s\n",timeObject2.toMilitary());
-		System.out.printf("%s\n",timeObject3.toMilitary());
-		
-	}
+		System.out.println(tunaObject);
 }
+}
+
+//first line we bulid constructor next line object
